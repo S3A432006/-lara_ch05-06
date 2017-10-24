@@ -58,7 +58,7 @@ Route::group(['prefix' => 'student'],function(){
         return '學號：' . $student_no . '的' . ((is_null($subject)) ? '所有科目' : $subject) . '成績';
     })->where(['subject' => '(chinese|english|math)']);
 });
-*/
+
 //練習七: 路由命名
 Route::pattern('student_no','s[0-9]{10}');
 Route::group(['prefix' => 'student'],function(){
@@ -70,4 +70,5 @@ Route::group(['prefix' => 'student'],function(){
             return '學號：' . $student_no . '的' . ((is_null($subject)) ? '所有科目' : $subject) . '成績';
         }])->where(['subject' => '(chinese|english|math)']);
 });
+*/
 
