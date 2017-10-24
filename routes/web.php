@@ -74,3 +74,8 @@ Route::group(['prefix' => 'student'],function(){
 //練習八: 修改根路由'/'，使之可執行HomeController的indexc函數
 Route::get('/', 'HomeController@indexc');
 
+//練習九: 修改路由，使之可執行StudentController內的getStudentData及getStudentScore函數
+Route::group(['prefix' => 'student'],function(){
+    Route::get('{student_no}',['as' => 'student', 'uses' => 'StudentController@getStudentData']);
+    Route::get('{student_no}/score/{subject?}',['as' => 'student.score', 'uses' => 'StudentController@getStudentScore'])->where(['subject' => '(chinese|english|math)']);
+});
