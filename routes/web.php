@@ -71,6 +71,7 @@ Route::group(['prefix' => 'student'],function(){
         }])->where(['subject' => '(chinese|english|math)']);
 });
 */
+/*
 //練習八: 修改根路由'/'，使之可執行HomeController的indexc函數
 Route::get('/', 'HomeController@indexc');
 
@@ -79,11 +80,13 @@ Route::group(['prefix' => 'student'],function(){
     Route::get('{student_no}',['as' => 'student', 'uses' => 'StudentController@getStudentData']);
     Route::get('{student_no}/score/{subject?}',['as' => 'student.score', 'uses' => 'StudentController@getStudentScore'])->where(['subject' => '(chinese|english|math)']);
 });
-/*
+
 //練習十: 新增路由'cool'
 Route::get('cool', 'Cool\TestController@indexc');
-*/
+
 //練習十: 修改路由'cool'，使之加入namespace路由'Cool'當中
 Route::group(['namespace' => 'Cool'],function (){
     Route::get('cool', 'TestController@index');
 });
+*/
+Route::get('/board', 'BoardController@getIndex');
