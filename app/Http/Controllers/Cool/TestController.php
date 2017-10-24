@@ -7,9 +7,10 @@ use App\Http\Controllers\Controller;
 
 class TestController extends Controller
 {
-    //
+
     //練習十: 加入indexc函數
-+    public function indexc(){
-    +        return 'Cooler';
- +    }
+   public function indexc(){
+          return 'Cooler';
+    }
 }
+
