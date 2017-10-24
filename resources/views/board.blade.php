@@ -1,6 +1,23 @@
-@extends('layouts.master')
-@section('title','排行榜')
-@section('content')
+<!DOCTYPE html>
+<html>
+<head>
+	<title>詳細資料</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}" />
+	<script type="text/javascript" src="{{ asset('js/jquery.min.js') }} "></script>
+	<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href=<?php echo url('/');?>>HelloLaravel</a>
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="<?php echo action('BoardController@getIndex');?> ">排行榜</a>
+			</li>
+		</ul>
+	</div>
+</nav>
 	<div class="container">
 		<div class="page-header">
 			<h1>排名</h1>
@@ -38,4 +55,3 @@
 	</div>
 </body>
 </html>
-	@stop
