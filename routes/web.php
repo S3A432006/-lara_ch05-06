@@ -71,4 +71,6 @@ Route::group(['prefix' => 'student'],function(){
         }])->where(['subject' => '(chinese|english|math)']);
 });
 */
+//練習八: 修改根路由'/'，使之可執行HomeController的indexc函數
+Route::get('/', 'HomeController@indexc');
 
