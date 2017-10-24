@@ -79,3 +79,5 @@ Route::group(['prefix' => 'student'],function(){
     Route::get('{student_no}',['as' => 'student', 'uses' => 'StudentController@getStudentData']);
     Route::get('{student_no}/score/{subject?}',['as' => 'student.score', 'uses' => 'StudentController@getStudentScore'])->where(['subject' => '(chinese|english|math)']);
 });
+//練習十: 新增路由'cool'
+Route::get('cool', 'Cool\TestController@indexc');
